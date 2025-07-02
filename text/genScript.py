@@ -54,10 +54,10 @@ for root, dirs, files in os.walk(AUDIO_ROOT):
             try:
                 text = transcribe(wav_path)
             except Exception as e:
-                print(f"❌ Lỗi xử lý {wav_path}: {e}")
+                print(f" Lỗi xử lý {wav_path}: {e}")
                 continue
 
             with open(txt_path, "w", encoding="utf-8") as f:
                 f.write(text.strip())
-            print(f"✅ {txt_path}")
+            print(f" {txt_path}")
            
